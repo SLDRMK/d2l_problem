@@ -29,7 +29,7 @@ def train_epoch_ch3(net, train_iter, loss, updater):
     # Return training loss and training accuracy
     return metric[0] / metric[2], metric[1] / metric[2]
 
-def evaluate_loss(net, data_iter, loss):  #@save
+def evaluate_loss(net, data_iter, loss):
     """评估给定数据集上模型的损失"""
     metric = d2l.Accumulator(2)  # 损失的总和,样本数量
     for X, y in data_iter:
